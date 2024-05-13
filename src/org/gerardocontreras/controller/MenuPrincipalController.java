@@ -20,7 +20,7 @@ import org.gerardocontreras.system.Main;
 public class MenuPrincipalController implements Initializable {
         private Main stage;
         @FXML
-        MenuItem btnClientes, btnTicketSoporte, btnEncargados;
+        MenuItem btnClientes, btnTicketSoporte, btnEncargados, btnCategoriaProducto;
         
         @FXML
         public void handleButtonAction(ActionEvent event) throws Exception{
@@ -30,6 +30,8 @@ public class MenuPrincipalController implements Initializable {
                 stage.menuTicketSoporteView();
             }else if(event.getSource() == btnEncargados){
                 stage.menuEncargadoView();
+            }else if(event.getSource() == btnCategoriaProducto){
+                stage.menuCategoriaProductoView();
             }
             
         }

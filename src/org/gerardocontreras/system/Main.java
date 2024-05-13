@@ -15,6 +15,8 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import org.gerardocontreras.controller.FormClienteController;
+import org.gerardocontreras.controller.FormEncargadoController;
+import org.gerardocontreras.controller.MenuCategoriaProductoController;
 import org.gerardocontreras.controller.MenuClienteController;
 import org.gerardocontreras.controller.MenuEncargadoController;
 import org.gerardocontreras.controller.MenuPrincipalController;
@@ -101,6 +103,25 @@ public class Main extends Application {
             System.out.println(e.getMessage());
         }
         
+    }
+    
+    public void formCargoView(int op){
+        try{
+           FormEncargadoController formEncargadoView = (FormEncargadoController) switchScene("FormEncargadoView.fxml", 500, 750);
+           formEncargadoView.setOp(op);
+           formEncargadoView.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void menuCategoriaProductoView(){
+        try{
+           MenuCategoriaProductoController menuCategoriaProductoView = (MenuCategoriaProductoController) switchScene("MenuCategoriaProductoView.fxml", 1200, 750);
+           menuCategoriaProductoView.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
     /**
      * @param args the command line arguments
